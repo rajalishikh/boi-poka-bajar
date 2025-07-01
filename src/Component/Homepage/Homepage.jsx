@@ -4,10 +4,12 @@ import Navbar from '../NavBar/Navbar';
 
 const Homepage = () => {
     return (
-        <div>
-            <Navbar></Navbar>
+        <div className='max-w-6xl mx-auto'>
+            <div>
+                <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
+            </div>
             
         </div>
     );
