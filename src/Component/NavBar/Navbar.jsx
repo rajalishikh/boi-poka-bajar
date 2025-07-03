@@ -28,7 +28,7 @@ const Navbar = () => {
       </ul>
       
     </div>
-    <a className="btn btn-ghost text-xl">Book </a>
+    <a className="text-2xl font-bold ">Book Vibe </a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="flex gap-2 ">
@@ -38,8 +38,8 @@ const Navbar = () => {
      </ul>
   </div>
   <div className="navbar-end gap-2 ">
-    <a className="btn">Sign In </a>
-    <a className="btn">Sign Up </a>
+    <a className="btn hover:bg-[#23BE0A] hover:text-white">Sign In </a>
+    <a className="btn hover:bg-[#59C6D2] hover:text-white">Sign Up </a>
   </div>
 </div>
 
@@ -47,9 +47,7 @@ const Navbar = () => {
 </div>
 
 
-
-
-    );
+ );
 };
 
 export default Navbar;
