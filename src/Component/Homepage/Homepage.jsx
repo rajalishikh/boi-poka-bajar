@@ -4,13 +4,16 @@ import Navbar from '../NavBar/Navbar';
 
 const Homepage = () => {
     return (
+        <div>
         <div className='max-w-6xl mx-auto'>
             <div>
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Footer></Footer>
+            
             </div>
             
+        </div>
+        <Footer></Footer>
         </div>
     );
 };
