@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 
 const BooksCard = ({data}) => {
     console.log(data)
     const { author,bookId,bookName,category,image,publisher,rating,tags,totalPages,yearOfPublishing,review,}=data
     return (
+        <Link to={`/books/${bookId}`}>
         <div className="border-2 border-[#13131326] rounded-xl hover:scale-105 " >
             <div className="card card-compact w-full bg-base-100 shadow-xl">
   <div>
@@ -30,6 +32,7 @@ const BooksCard = ({data}) => {
 </div>
             
         </div>
+        </Link>
     );
 };
 

@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import BookDetails from './Component/BookDetails/BookDetails';
 import DashBoard from './Component/DashBoard/dASHbOARD.JSX';
 import ErrorPage from './Component/ErrorPage/ErrorPage';
 import Homepage from './Component/Homepage/Homepage';
@@ -19,6 +20,12 @@ const router = createBrowserRouter([
       {
       path:"/",
       element:<MainHomepage></MainHomepage>
+    },
+    {
+      path:"books/:detailsId",
+      element:<BookDetails></BookDetails>,
+      loader:()=>fetch("/public/booksData.json")
+
     },
     {
       path:"/DashBoard",
