@@ -3,8 +3,8 @@ const BooksCard = ({data}) => {
     console.log(data)
     const { author,bookId,bookName,category,image,publisher,rating,tags,totalPages,yearOfPublishing,review,}=data
     return (
-        <div >
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="border-2 border-[#13131326] rounded-xl hover:scale-105" >
+            <div className="card card-compact w-full bg-base-100 shadow-xl">
   <div>
     <figure className="bg-[#F3F3F3] m-3 rounded-xl">
     <img  className="w-[134px] h-[166px] p-4" src={image} alt="Shoes" />
