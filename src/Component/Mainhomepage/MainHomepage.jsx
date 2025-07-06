@@ -1,10 +1,11 @@
 
 import img from "../../assets/Image/books.jpg";
+import Books from "../Books/Books";
 const MainHomepage = () => {
     return (
         <div>
             {/* My Home Page Banner design */}
-           <div className="hero min-h-screen bg-base-200">
+           <div className="hero min-h-screen bg-base-200 mb-4">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img src={img} className="max-w-sm rounded-lg shadow-2xl" />
     <div>
@@ -14,6 +15,8 @@ const MainHomepage = () => {
     </div>
   </div>
            </div>
+           {/* Book section  */}
+           <Books></Books>
             
         </div>
     );
