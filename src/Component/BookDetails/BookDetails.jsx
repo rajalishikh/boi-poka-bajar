@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { setStoreCard } from "../../Utility/Utility";
 
 const BookDetails = () => {
     const {detailsId}=useParams()
@@ -13,7 +14,13 @@ const BookDetails = () => {
     console.log(find_data)
     const {author,bookId,bookName,category,image,publisher,rating,tags,totalPages,yearOfPublishing,review}=find_data
 
-    
+    // Books Details part when click 
+
+    // add books id
+    const handleBookId=(id)=>{
+      setStoreCard(id)
+
+    }
 
     return (
         <div>
@@ -28,7 +35,7 @@ const BookDetails = () => {
         {review}
       </p>
       <div className="flex  gap-2">
-        <button className="btn  hover:bg-[#50B1C9] hover:text-white">Mark asRead</button>
+        <button onClick={()=>handleBookId(bookId)} className="btn  hover:bg-[#50B1C9] hover:text-white">Mark asRead</button>
         <button className="btn hover:bg-[#50B1C9] hover:text-white"> MArk asWishList</button>
       </div>
     </div>
