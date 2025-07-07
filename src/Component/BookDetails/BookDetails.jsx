@@ -27,7 +27,10 @@ const BookDetails = () => {
       <p className="py-6">
         {review}
       </p>
-      <button className="btn btn-primary">Get Started</button>
+      <div className="flex  gap-2">
+        <button className="btn  hover:bg-[#50B1C9] hover:text-white">Mark asRead</button>
+        <button className="btn hover:bg-[#50B1C9] hover:text-white"> MArk asWishList</button>
+      </div>
     </div>
   </div>
 </div>
