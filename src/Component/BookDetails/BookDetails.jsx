@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { setStoreCard } from "../../Utility/Utility";
+import saveBookName from "../../Utility/UtilityBookName";
 
 const BookDetails = () => {
     const {detailsId}=useParams()
@@ -21,6 +22,10 @@ const BookDetails = () => {
       setStoreCard(id)
 
     }
+    const handleBookName=(bookName)=>{
+      saveBookName(bookName)
+
+    }
 
     return (
         <div>
@@ -36,7 +41,7 @@ const BookDetails = () => {
       </p>
       <div className="flex  gap-2">
         <button onClick={()=>handleBookId(bookId)} className="btn  hover:bg-[#50B1C9] hover:text-white">Mark asRead</button>
-        <button className="btn hover:bg-[#50B1C9] hover:text-white"> MArk asWishList</button>
+        <button onClick={()=>handleBookName(bookName)} className="btn hover:bg-[#50B1C9] hover:text-white"> MArk asWishList</button>
       </div>
     </div>
   </div>
