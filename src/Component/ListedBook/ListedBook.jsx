@@ -1,22 +1,26 @@
 
+import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getBookId } from '../../Utility/Utility';
+import BooksCard from '../BooksCard/BooksCard';
 
 const ListedBook = () => {
-    const allBookData=useLoaderData()
-   
-    const listedBookId=getBookId()
-  
-    
 
-    const listedBookIdInt=listedBookId.map(item=>parseInt(item))
-    
+  const [dataLIsted,setDataLIsted]=useState()
+  const allBookData=useLoaderData()
+  console.log("Save The Data ",dataLIsted)
 
-    const myFinalListedId=allBookData.filter(item=>listedBookIdInt.includes(item.bookId))
-    console.log(myFinalListedId)
+    useEffect(()=>{
+      
+       const listedBookId=getBookId()
+       const listedBookIdInt=listedBookId.map(item=>parseInt(item))
+       const myFinalListedId=allBookData.filter(item=>listedBookIdInt.includes(item.bookId))
+       setDataLIsted(myFinalListedId)
 
+
+    },[])
     
     
     return (
@@ -29,7 +33,12 @@ const ListedBook = () => {
     </TabList>
 
     <TabPanel>
-      <h2>Here is Listed Book </h2>
+      
+      <div>
+        {
+          dataLIsted.map(item=><BooksCard data={item} ></BooksCard>)
+        }
+      </div>
     </TabPanel>
     <TabPanel>
       <h2>Here is Wish List Book </h2>
