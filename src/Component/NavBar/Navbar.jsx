@@ -23,8 +23,8 @@ const Navbar = () => {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/"}>Home</NavLink></li>
-      <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/DashBoard"}>Listed Books </NavLink></li>
-      <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/DashBoard"}>Pages to read  </NavLink></li>
+      <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/ListedBook"}>Listed Books </NavLink></li>
+      <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/DashBoard"}>DashBoard </NavLink></li>
       </ul>
       
     </div>
@@ -33,8 +33,8 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="flex gap-2 ">
       <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/"}>Home</NavLink></li>
-      <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/DashBoard"}>Listed Books </NavLink></li>
-      <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/DashBoard"}>Pages to read  </NavLink></li>
+      <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/ListedBook"}>Listed Books </NavLink></li>
+      <li className="hover:border border-[#23BE0A] p-2 rounded-xl hover:text-[#23BE0A] "><NavLink to={"/DashBoard"}>DashBoard</NavLink></li>
      </ul>
   </div>
   <div className="navbar-end gap-2 ">

@@ -16,8 +16,8 @@ const setStoreCard=(id)=>{
         findData.push(id)
         const convertStringFindData=JSON.stringify(findData)
         const saveDataLs=localStorage.setItem("BookId",convertStringFindData)
-        return saveDataLs
+        
     }
 }
-export { setStoreCard }
+export { getBookId, setStoreCard }
 
