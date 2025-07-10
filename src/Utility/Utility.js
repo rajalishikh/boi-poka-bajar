@@ -1,3 +1,5 @@
+import { toast } from "react-toastify"
+
 const getBookId=()=>{
     const findId=localStorage.getItem("BookId")
     if(findId){
@@ -16,7 +18,8 @@ const setStoreCard=(id)=>{
         findData.push(id)
         const convertStringFindData=JSON.stringify(findData)
         const saveDataLs=localStorage.setItem("BookId",convertStringFindData)
-        
+        toast("This Book is All ready taken")
+       
     }
 }
 export { getBookId, setStoreCard }

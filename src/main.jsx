@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 import BookDetails from './Component/BookDetails/BookDetails';
 import DashBoard from './Component/Dashboard/Dashboard';
 import ErrorPage from './Component/ErrorPage/ErrorPage';
@@ -47,5 +48,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </StrictMode>,
 )

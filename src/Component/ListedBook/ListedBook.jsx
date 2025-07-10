@@ -8,15 +8,17 @@ import BooksCard from '../BooksCard/BooksCard';
 
 const ListedBook = () => {
 
-  const [dataLIsted,setDataLIsted]=useState()
+  const [dataLIsted,setDataLIsted]= useState([])
   const allBookData=useLoaderData()
-  console.log("Save The Data ",dataLIsted)
+  console.log("Save The Data ",allBookData)
 
     useEffect(()=>{
       
        const listedBookId=getBookId()
        const listedBookIdInt=listedBookId.map(item=>parseInt(item))
        const myFinalListedId=allBookData.filter(item=>listedBookIdInt.includes(item.bookId))
+       console.log("My raj",myFinalListedId)
+       
        setDataLIsted(myFinalListedId)
 
 
@@ -36,8 +38,9 @@ const ListedBook = () => {
       
       <div>
         {
-          dataLIsted.map(item=><BooksCard data={item} ></BooksCard>)
+          dataLIsted.map(item=><BooksCard data={item}></BooksCard>)
         }
+        
       </div>
     </TabPanel>
     <TabPanel>
