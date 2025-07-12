@@ -42,6 +42,7 @@ const BookDetails = () => {
       <p id="review" className="py-6 hidden ">
         {review}
       </p>
+      <p> Total Pages:{totalPages}</p>
       <div className="flex  gap-2">
         <button onClick={()=>handleBookId(bookId)} className="btn  hover:bg-[#50B1C9] hover:text-white">Mark asRead</button>
         <button onClick={()=>handleBookName(bookName)} className="btn hover:bg-[#50B1C9] hover:text-white"> MArk asWishList</button>

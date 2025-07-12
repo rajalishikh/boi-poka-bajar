@@ -25,6 +25,7 @@ const BooksCard = ({data}) => {
     <div className="flex justify-between w-full ">
       <div><p className="text-[#131313CC] font-bold">{category}</p></div>
       <div><p>{rating}</p></div>
+      <p> Total Pages:{totalPages}</p>
     </div>
     
     

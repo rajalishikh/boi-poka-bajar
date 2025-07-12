@@ -9,6 +9,7 @@ import BooksCard from '../BooksCard/BooksCard';
 const ListedBook = () => {
 
   const [dataLIsted,setDataLIsted]= useState([])
+  const [sort,Setsort]=useState('')
   const allBookData=useLoaderData()
   console.log("Save The Data ",allBookData)
 
@@ -23,10 +24,33 @@ const ListedBook = () => {
 
 
     },[])
+
+    const handleShort=(shortType)=>{
+      if(shortType === "Sort By Book Page" ){
+        Setsort(shortType)
+       const myShortLIst=[...dataLIsted].sort((a,b)=>a.totalPages -b.totalPages)
+       setDataLIsted(myShortLIst)
+
+      }else if(shortType ==="Sort By Book Star"){
+        Setsort(shortType)
+       const myShortLIst=[...dataLIsted].sort((a,b)=>a.rating -b.rating)
+       setDataLIsted(myShortLIst)
+
+      }
+      
+
+    }
     
     
     return (
         <div>
+          <div className="dropdown dropdown-bottom">
+  <div tabIndex={0} role="button" className="btn m-1">{sort?`Sort By${sort}`:"Sort By"}</div>
+  <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+    <li onClick={()=>handleShort("Sort By Book Page")}><a>Sort By Book Page </a></li>
+    <li onClick={()=>handleShort("Sort By Book Star")}><a>Sort By Book Star </a></li>
+  </ul>
+</div>
            
             <Tabs>
     <TabList>
